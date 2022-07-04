@@ -9,6 +9,7 @@ RUN apt-get update && \
     unzip protoc.zip && \
     cp /tmp/protoc/bin/protoc /usr/local/bin && \
     curl -L https://github.com/grpc/grpc-web/releases/download/1.3.1/protoc-gen-grpc-web-1.3.1-linux-x86_64 > protoc-gen-grpc-web && \
+    chmod +x /tmp/protoc/protoc-gen-grpc-web && \
     cp /tmp/protoc/protoc-gen-grpc-web /usr/local/bin && \
     cd /tmp && \
     rm -r /tmp/protoc && \
